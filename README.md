@@ -10,5 +10,5 @@ Requirements:
 4. If players cross over adjacent squares, a battle begins.
 
 To play the game check the link below:
-https://kpochojka.github.io/turn-based-game/
+https://polkakropka.github.io/js-board-game/
 
