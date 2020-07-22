@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Turn-based board battle game in Javascript and jQuery">
+    <meta name="author" content="Kamila Pochojka">
+    <!-- <link rel="icon" href="../../favicon.ico">    -->
+    <title>Turn-based battle game -  Project 6 by Openclassrooms.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="image/logo.png" class="logo" alt="">
+            <h1 id="here">Welcome to the Veggie World!</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="player-container active" id="player-1">
+            <div class="player">
+                <h2 class="name-1"></h2>
+                <div class="player-img"> <img src="image/player-1.png" alt="pig">
+                </div>
+            </div>
+            <div class="weapon">
+                <h2>Life Score: <span id="life-1"></span></h2>
+                <div class="fruit-1"></div>
+                <h3>Vitamins: <span class="vitamins-1"></span></h3>
+                <div class="turn-1"></div>
+                <div class="buttons">
+                    <button class="btn-attack-1">Attack</button>
+                    <button class="btn-defend-1">Defend</button>
+                </div>
+            </div>
+        </div>
+        <section id="intro">
+            <div class="intro-content">
+                <h2>Let's play the Veggie Game in the Veggie World</h2>
+                <p>Game Rules:</p>
+                <ol>
+                    <li>Each player can move 3 spaces horizontally or vertically.</li>
+                    <li>In the Veggie World you can earn your strength by collecting vitamins.</li>
+                    <li>Your current weapon is an apple, which is healthy, but you have a chance incrase your power!</li>
+                    <li>Fruits have different values, try to choose the strongest one:</li>
+                </ol>
+                <div class="weapons">
+                    <figure>
+                        <img src="image/wp-2.png" alt="strawberry">
+                        <caption>30</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-3.png" alt="strawberry">
+                        <caption>40</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-4.png" alt="strawberry">
+                        <caption>50</caption>
+                    </figure>
+
+                    <figure>
+                        <img src="image/wp-5.png" alt="strawberry">
+                        <caption>60</caption>
+                    </figure>
+
+                </div>
+                <ol>
+                    <li>If you feel healthy, you can find an another player on the game board to start your fight.</li>
+                    <li>If you feel healthy, you can find an another player on the game board to start your fight.</li>
+                    <li>You can earn more points if you will cross the squares with <img id="sign" src="image/quiz-1.png" alt=""> and answer right to the question.</li>
+                    <li>But remember! If your answer will be wrong, you will descrease your life scores!</li>
+                    <li>You have 2 possibilites: attack or defend, choose the better strategy.</li>
+
+                </ol>
+                <p>I wish you luck!</p>
+                <button id="start" onclick="startGame(this)">Start game</button>
+            </div>
+        </section>
+        <div id="board-game">
+        </div>
+        <div class="player-container" id="player-2">
+            <div class="player">
+                <h2 class="name-2"></h2>
+                <div class="player-img"> <img src="image/player-2.png" alt="snake"></div>
+            </div>
+            <div class="weapon">
+                <h2>Life score: <span id="life-2"></span></h2>
+                <div class="fruit-2"></div>
+                <h3>Vitamins: <span class="vitamins-2"></span></h3>
+                <div class="turn-2"></div>
+                <div class="buttons">
+                    <button class="btn-attack-2">Attack</button>
+                    <button class="btn-defend-2">Defend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-quiz">
+        <button class="close-modal" onclick="closeQuiz(this)">x</button>
+        <p class="question"></p>
+        <form></form>
+        <p class="result"></p>
+    </div>
+    <div id="gameOver">
+        <div class="gameOver-content">
+            <h2>GAME OVER!</h2>
+            <p>The winner is <span id="winner"></span>!</p>
+            <p>Don't worry <span id='looser'></span>! Maybe next time!</p>
+            <h2>Thank you for your play!</h2>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
